@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lab1.css">
+</head>
+
+<body>
+    <header>
+        <table class="lab_table">
+            <tr>
+                <td></td>
+                <td style="background-color: rgb(244, 222,204);"></td>
+                <td></td>
+                <td rowspan="3" style="background-color: rgb(22, 54, 236);"></td>
+                <td></td>
+                <td style="background-color: aquamarine;"></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="background-color: rgb(244, 222,204);"></td>
+                <td></td>
+                <td colspan="1" style="background-color: rgb(33, 222,22);"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="background-color: rgb(17, 108, 212);"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color: rgb(17, 108, 212);"></td>
+                <td></td>
+                <td rowspan="3" style="background-color: rgb(0, 0, 0);"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color: rgb(117, 59, 11);"></td>
+                <td></td>
+                <td style="background-color: blueviolet;"></td>
+                <td></td>
+                <td rowspan="2" style="background-color: red;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(244, 222,204);"></td>
+                <td style="background-color: rgb(23, 231, 58);"></td>
+                <td colspan="3" style="background-color: rgb(244, 222,204);"></td>
+                <td rowspan="2" style="background-color: rgb(234, 0, 255);"></td>
+            </tr>
+        </table>
+    </header>
+    <form class="reg_form">
+        <ul>
+            <li>
+                <h2>Запись к ветеринару онлайн</h2>
+                <span class="required_notification">* Обязательно для заполнения</span>
+            </li>
+            <li>
+                <label for="name">Кличка:</label>
+                <input type="text" name="name" placeholder="Масяня" />
+            </li>
+            <li>
+                <label for="type">*Вид:</label>
+                <select name="types" id="" required>
+                    <option>Кошка</option>
+                    <option>Собака</option>
+                    <option>Крыса</option>
+                    <option>Другое</option>
+                </select>
+            </li>
+            <li>
+                <label for="breeds">Порода:</label>
+                <input type="text" name="breeds" placeholder="Абиссинская" />
+            </li>
+            <li>
+                <label for="birthday">Дата рождения:</label>
+                <input type="date" name="calendar">
+            </li>
+            <li>
+                <label for="gender">Пол:</label>
+                <span><input type="radio" name="gender" value="male" checked>Мужской</span><br>
+                <span><input type="radio" name="gender" value="female">Женский</span>
+            </li>
+            <li>
+                <label for="problems">*Жалобы:</label>
+                <textarea name="problems" cols="30" rows="10" required></textarea>
+            </li>
+            <li>
+                <button type="submit" class="submit">Отправить</button>
+            </li>
+        </ul>
+    </form>
+</body>
+
+</html>

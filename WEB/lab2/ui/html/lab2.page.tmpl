@@ -1,0 +1,66 @@
+{{template "base" .}}
+
+{{define "head"}}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/lab2.css">
+    <script src="/static/js/lab2.js"></script>
+</head>
+{{end}}
+
+{{define "title"}}Лабораторная №2{{end}}
+
+{{define "header"}}
+{{end}}
+
+{{define "main"}}
+<div class="num_system">
+    <table>
+        <tr>
+            <td>Исходное число:</td>
+            <td><input type="text" placeholder="10" min="2" max="36" id="source_num" onchange="NumSystemConvertion()">
+            </td>
+        </tr>
+        <tr>
+            <td>Исходная степень:</td>
+            <td><input type="number" placeholder="10" min="2" max="36" id="source_pow" onchange="NumSystemConvertion()">
+            </td>
+        </tr>
+        <tr>
+            <td>Рез. степень:</td>
+            <td><input type="number" placeholder="10" min="2" max="36" id="result_pow" onchange="NumSystemConvertion()">
+            </td>
+        </tr>
+        <tr>
+            <td>Результат:</td>
+            <td id="result_num"></td>
+        </tr>
+    </table>
+</div>
+<hr class="dotted">
+<div class="table_info">
+    <table>
+        <tr>
+            <td>Число столбцов:</td>
+            <td><input type="number" placeholder="10" min="1" max="20" id="table_cols"></td>
+        </tr>
+        <tr>
+            <td>Число строк:</td>
+            <td><input type="number" placeholder="10" min="1" max="20" id="table_rows"></td>
+        </tr>
+        <tr>
+            <td>Цвет заголовков:</td>
+            <td><input type="text" id="table_color"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit" onclick="CreateMultTable()">Нарисовать
+                    таблицу</button></td>
+        </tr>
+    </table>
+</div>
+<div id="mult_table">
+</div>
+{{end}}

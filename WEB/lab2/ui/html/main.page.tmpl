@@ -1,0 +1,55 @@
+{{template "base" .}}
+
+{{define "head"}}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+{{end}}
+
+{{define "title"}}Главная страница{{end}}
+
+{{define "header"}}
+<header>
+    <img class="logo" src="/static/img/4000_2_11.jpg" alt="top logo">
+    <h1>Ветклиника Масяня</h1>
+</header>
+{{end}}
+{{define "main"}}
+<div class="content">
+    <div class="vertical-menu">
+        <a href="#">Главная</a>
+        <a href="/lab1">Лабораторная работа №1</a>
+    </div>
+    <div class="info">
+        <h2>
+            Приветствуем на сайте ветклиники "Масяня"!
+        </h2>
+        <p>Здесь вы можете найти всю необходимую информацию по уходу за вашим питомцем.</p>
+        <p>У вас так же есть возможность записаться на прием онлайн.</p>
+        <p>Для записи онлайн в левом меню выберите пункт "Лабораторная №1" или нажмите на ссылку ниже.</p>
+        <a href="/lab1">Записаться на прием онлайн</a>
+        <div class="pets">
+            <img src="/static/img/dog+cats.jpeg" />
+            <img src="/static/img/puma.jpg" />
+            <img src="/static/img/kic.jpg" />
+        </div>
+    </div>
+</div>
+{{end}}
+{{define "footer"}}
+<footer>
+    <div class="contacts">
+        <h3>Контакты:</h3>
+        <address>
+            Эл. почта: <a href="mailto:masyana@mail.ru">masyana@mail.ru</a>
+            <br>
+            Телефон: <a href="tel:8800553535">8(800)555-35-35</a>
+        </address>
+        <span>{{.current_time}}</span>
+    </div>
+</footer>
+{{end}}
