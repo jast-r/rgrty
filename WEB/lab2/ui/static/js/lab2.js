@@ -11,12 +11,12 @@ function CreateMultTable() {
     let rows = document.getElementById("table_rows").value
     let cols = document.getElementById("table_cols").value
     let color = document.getElementById("table_color").value
-    if (rows > 30) {
-        alert('Число строк не может быть больше 10!')
+    if (rows > 20) {
+        alert('Число строк не может быть больше 20!')
         return
     }
-    if (cols > 30) {
-        alert('Число столбцов не может быть больше 10!')
+    if (cols > 20) {
+        alert('Число столбцов не может быть больше 20!')
         return
     }
     for (i = 0; i <= rows; i++) {

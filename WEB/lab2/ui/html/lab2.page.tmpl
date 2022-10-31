@@ -17,50 +17,66 @@
 {{end}}
 
 {{define "main"}}
-<div class="num_system">
+<div class="first_idz">
     <table>
         <tr>
-            <td>Исходное число:</td>
-            <td><input type="text" placeholder="10" min="2" max="36" id="source_num" onchange="NumSystemConvertion()">
-            </td>
+            <td>Строка:</td>
+            <td>{{.first_idz_str}}</td>
         </tr>
         <tr>
-            <td>Исходная степень:</td>
-            <td><input type="number" placeholder="10" min="2" max="36" id="source_pow" onchange="NumSystemConvertion()">
-            </td>
+            <td>Количество символов "а", "Н", "к":</td>
+            <td>{{.first_idz_res}}</td>
+        </tr>
+    </table>
+</div>
+<div class="second_idz">
+    <table>
+        <tr>
+            <td>Массив:</td>
+            <td>{{.second_idz_arr}}</td>
         </tr>
         <tr>
-            <td>Рез. степень:</td>
-            <td><input type="number" placeholder="10" min="2" max="36" id="result_pow" onchange="NumSystemConvertion()">
-            </td>
-        </tr>
-        <tr>
-            <td>Результат:</td>
-            <td id="result_num"></td>
+            <td>Количество элементов:</td>
+            <td>{{.second_idz_res}}</td>
         </tr>
     </table>
 </div>
 <hr class="dotted">
+<div class="num_system">
+    <table>
+        <tr>
+            <td>Исходное число:</td>
+            <td>{{.source_num}}</td>
+        </tr>
+        <tr>
+            <td>Исходная степень:</td>
+            <td>{{.source_pow}}</td>
+        </tr>
+        <tr>
+            <td>Рез. степень:</td>
+            <td>{{.res_pow}}</td>
+        </tr>
+        <tr>
+            <td>Результат:</td>
+            <td>{{.result}}</td>
+        </tr>
+    </table>
+</div>
 <div class="table_info">
     <table>
         <tr>
             <td>Число столбцов:</td>
-            <td><input type="number" placeholder="10" min="1" max="20" id="table_cols"></td>
+            <td>{{.rows}}</td>
         </tr>
         <tr>
             <td>Число строк:</td>
-            <td><input type="number" placeholder="10" min="1" max="20" id="table_rows"></td>
+            <td>{{.cols}}</td>
         </tr>
         <tr>
             <td>Цвет заголовков:</td>
-            <td><input type="text" id="table_color"></td>
-        </tr>
-        <tr>
-            <td colspan="2"><button type="submit" onclick="CreateMultTable()">Нарисовать
-                    таблицу</button></td>
+            <td>{{.color}}</td>
         </tr>
     </table>
 </div>
-<div id="mult_table">
-</div>
+{{.mult_table}}
 {{end}}

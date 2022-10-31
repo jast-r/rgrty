@@ -1,35 +1,19 @@
+td {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0px 10px 10px 0px;
+}
+
 .dotted {
     border-top: 3px dotted #bbb;
-}
-
-.table_info input,
-.num_system input {
-    width: 100px;
-}
-
-.num_system {
-    padding: 3px;
-    margin-bottom: 10px;
-}
-
-#result_num {
-    border: 1px solid black;
-    border-radius: 3px;
-    text-align: center;
-}
-
-.table_info td {
-    padding: 3px;
-}
-
-
-#mult_table table {
-    border-collapse: collapse;
 }
 
 #mult_table td {
     width: 20px;
     height: 20px;
     text-align: center;
-    border: 1px solid black;
 }
