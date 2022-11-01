@@ -41,6 +41,9 @@ func lab1(w http.ResponseWriter, r *http.Request) {
 	files := []string{
 		"./ui/html/lab1.page.tmpl",
 		"./ui/html/base.layout.tmpl",
+		"./ui/html/head.block.tmpl",
+		"./ui/html/footer.block.tmpl",
+		"./ui/html/menu.block.tmpl",
 	}
 	ts, err := template.ParseFiles(files...)
 	if err != nil {
@@ -108,6 +111,9 @@ func lab2(w http.ResponseWriter, r *http.Request) {
 	files := []string{
 		"./ui/html/lab2.page.tmpl",
 		"./ui/html/base.layout.tmpl",
+		"./ui/html/head.block.tmpl",
+		"./ui/html/footer.block.tmpl",
+		"./ui/html/menu.block.tmpl",
 	}
 	ts, err := template.ParseFiles(files...)
 	if err != nil {
