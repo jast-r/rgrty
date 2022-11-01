@@ -18,6 +18,9 @@ func home(w http.ResponseWriter, r *http.Request) {
 	files := []string{
 		"./ui/html/main.page.tmpl",
 		"./ui/html/base.layout.tmpl",
+		"./ui/html/head.block.tmpl",
+		"./ui/html/footer.block.tmpl",
+		"./ui/html/menu.block.tmpl",
 	}
 	ts, err := template.ParseFiles(files...)
 	if err != nil {
@@ -26,7 +29,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	data := map[string]interface{}{
-		"current_time": time.Now().UTC().Format("02.01.2006 15:04:05"),
+		"current_time": time.Now().UTC().Format("02.01.2006 15:04:05.99"),
 	}
 	if err = ts.Execute(w, data); err != nil {
 		log.Println(err.Error())
